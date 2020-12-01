@@ -32,5 +32,3 @@ $c = new common();
 <?php
 include "incs/footer.inc.php"
 ?>
-
-test
