@@ -1,0 +1,6 @@
+{
+    "require": {
+        "google/apiclient": "^2.7",
+        "bluem/tree": "^3.1"
+    }
+}
