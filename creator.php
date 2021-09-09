@@ -5,11 +5,7 @@ include "incs/db.inc.php";
 include "incs/header.inc.php";
 
 $c = new common();
-//$s = new Story();
 ?>
-
-
-
 
 
 <div class="chart" id="collapsable-example"></div>
@@ -22,12 +18,16 @@ $c = new common();
 
 <script src="js/treant/collapsable.js"></script>
 <script>
-    tree = new Treant( chart_config );
+	if ( typeof(chart_config) != "undefined" ) {
+
+    	tree = new Treant( chart_config );
+
+    } else {
+
+    	alert("Missing var: chart_config. Check that all JS files are properly included.");
+
+    }
 </script>
-
-
-
-
 
 <?php
 include "incs/footer.inc.php"
