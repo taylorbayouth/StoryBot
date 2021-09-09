@@ -3,7 +3,9 @@
 session_start();
 
 include_once(__dir__ . "/incs/commons.class.php");
-
+//$common = new Common;
+//echo $common->generateAlphaNumericStr(10);
+//print_r($_SESSION["google_oauth_info"]);
 ?>
 <html>
 <head>
