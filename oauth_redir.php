@@ -5,9 +5,9 @@ session_start();
 require_once 'libs/vendor/autoload.php';
  
 // init configuration
-$clientID = '70369335195-vcj1d8ua9iutcs9oqb1aeds3l8hgfes8.apps.googleusercontent.com';
+$clientID     = '70369335195-vcj1d8ua9iutcs9oqb1aeds3l8hgfes8.apps.googleusercontent.com';
 $clientSecret = '9EaztV5MrjctkwlLGQAr_YIQ';
-$redirectUri = 'http://localhost:8888/storybot/oauth_redir.php';
+$redirectUri  = 'http://localhost:8888/storybot/oauth_redir.php';
   
 // create Client Request to access Google API
 $client = new Google_Client();
@@ -23,10 +23,10 @@ if (isset($_GET['code'])) {
   $client->setAccessToken($token['access_token']);
   
   // get profile info
-  $google_oauth = new Google_Service_Oauth2($client);
-  $google_account_info = $google_oauth->userinfo->get();
-  $email =  $google_account_info->email;
-  $name =  $google_account_info->name;
+  $google_oauth         = new Google_Service_Oauth2($client);
+  $google_account_info  = $google_oauth->userinfo->get();
+  $email                =  $google_account_info->email;
+  $name                 =  $google_account_info->name;
 
   $_SESSION["google_oauth_info"] = array($email, $name);
 
